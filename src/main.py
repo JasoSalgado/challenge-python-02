@@ -1,11 +1,44 @@
 # Resolve the problem!!
 import string
+import random
 
+LOWER_LETTERS = list('abcdefghijklmnopqrstuvwxyz')
+UPPER_LETTERS = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+DIGITS = list('0123456789')
 SYMBOLS = list('!"#$%&\'()*+,-./:;?@[]^_`{|}~')
 
 
 def generate_password():
     # Start coding here
+    password = random.choice(LOWER_LETTERS + UPPER_LETTERS + DIGITS + SYMBOLS)
+    
+    create_secure_password = []
+    for i in range(3, 16):
+        for j in range(2):
+            select = random.randint(0, len(LOWER_LETTERS) -1)
+            choose = LOWER_LETTERS[select]
+            password = random.choice
+        j=0
+
+        for j in range(2):
+            select = random.randint(0, len(UPPER_LETTERS) -1)
+            choose = UPPER_LETTERS[select]
+            password = random.choice
+        j=0
+        
+        for j in range(2):
+            select = random.randint(0, len(DIGITS) -1)
+            choose = DIGITS[select]
+            password = random.choice
+        j=0
+
+        for j in range(2):
+            select = random.randint(0, len(SYMBOLS) -1)
+            choose = SYMBOLS[select]
+            password = random.choice
+        j=0
+
+    return create_secure_password
 
 
 def validate(password):
